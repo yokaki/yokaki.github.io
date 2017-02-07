@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <link rel="stylesheet" href="style/cart.css">
+</head>
+<body>
+<div id="cart">
+  <h1 v-text="title"></h1>
+  <ul>
+    <li v-for="product in productList">
+      <div class="input-check" :class="{'checked':product.checked}" @click="changeSelect(product)"></div>
+      <img :src="product.Image" :alt="product.Name" class="pro-image">
+      <span class="pro-name">{{product.Name}}</span>
+      <span class="pro-unit-price">{{product.Price | money}}</span>
+      <button @click="changeQuantity(product,-1)">-</button>
+      <input type="text" v-model="product.Quantity" class="pro-count">
+      <button @click="changeQuantity(product,1)">+</button>
+      <span class="pro-total-price">{{product.Quantity*product.Price | money}}</span>
+    </li>
+  </ul>
+  <div class="footer">
+    <div class="input-check" :class="{'checked':selectAllFlag}" @click="selectAll(true)"></div>
+    <span>全选</span>
+    <div class="input-check" @click="selectAll(false)"></div>
+    <span>取消全选</span>
+    <span class="all-price">商品总价：<span class="pro-all-price">{{totlePrice | money}}</span></span>
+    <button class="settlement">结算中心</button>
+
+  </div>
+</div>
+<script src="javascript/vue.js"></script>
+<script src="javascript/vue-resource.js"></script>
+<script src="javascript/cart.js"></script>
+</body>
+</html>  

@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .main {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+    .num {
+      height: 100px;
+      width: 100px;
+      border-radius: 10px;
+      background-color: #ccc;
+      box-shadow: 3px 3px 3px #000;
+      display: flex;
+      padding: 10px;
+    }
+    .small-num {
+      background-color: #000;
+      height: 30px;
+      width: 30px;
+      border-radius: 50%;
+    }
+    .num1 { /*1号：只有一个点，上下左右居中*/
+      justify-content: center;
+      align-items: center;
+    }
+    .num2 {/*2号：先把两个点放在上面第一排的两边*/
+      justify-content: space-between;
+    }
+    .num2 .small-num:nth-of-type(2) {/*再把第二个点放到右下角*/
+      align-self: flex-end;
+    }
+    .num3 {/*同2号：先把三个点放到第一排*/
+      justify-content: space-between;
+    }
+    .num3 .small-num:nth-of-type(2) {/*把第二个点放到中心*/
+      align-self: center;
+    }
+    .num3 .small-num:nth-of-type(3) {/*把第三个点放到右下角*/
+      align-self: flex-end;
+    }
+    .num4 {/*4号：把两个小组分别放到第一排的左右两边*/
+      justify-content: space-between;
+    }
+    .num4 .column {/*两个小组分别设为flex定位，主轴为垂直，再把小组内的两个点放在小组的上下两端*/
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .num5 {/*5号：与4号雷同*/
+      justify-content: space-between;
+
+    }
+    .num5 > .small-num {
+      align-self: center;
+    }
+    .num5 .column {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .num6 {/*6号：先把三个小组竖直排列*/
+      justify-content: space-between;
+      flex-direction: column;
+    }
+    .num6 .column {/*设置三个小组为flex，再分别把每个小组的两个点左右布局*/
+      display: flex;
+      justify-content: space-between;
+    }
+  </style>
+</head>
+<body>
+<div class="main">
+  <div class="num1 num">
+    <div class="small-num"></div>
+  </div>
+  <div class="num2 num">
+    <div class="small-num"></div>
+    <div class="small-num"></div>
+  </div>
+  <div class="num3 num">
+    <div class="small-num"></div>
+    <div class="small-num"></div>
+    <div class="small-num"></div>
+  </div>
+  <div class="num num4">
+    <div class="column">
+      <div class="small-num"></div>
+      <div class="small-num"></div>
+    </div>
+    <div class="column">
+      <div class="small-num"></div>
+      <div class="small-num"></div>
+    </div>
+  </div>
+  <div class="num num5">
+    <div class="column">
+      <div class="small-num"></div>
+      <div class="small-num"></div>
+    </div>
+    <div class="small-num"></div>
+    <div class="column">
+      <div class="small-num"></div>
+      <div class="small-num"></div>
+    </div>
+  </div>
+  <div class="num num6">
+    <div class="column">
+      <div class="small-num"></div>
+      <div class="small-num"></div>
+    </div>
+    <div class="column">
+      <div class="small-num"></div>
+      <div class="small-num"></div>
+    </div>
+    <div class="column">
+      <div class="small-num"></div>
+      <div class="small-num"></div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

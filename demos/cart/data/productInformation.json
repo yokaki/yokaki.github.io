@@ -1,0 +1,32 @@
+{
+  "status": 1,
+  "result": {
+    "totleMoney": 1324,
+    "productList": [
+      {
+        "Id": "56957256678",
+        "Name": "科沃斯（Ecovacs）地宝魔镜S（CEN540-LG）扫地机",
+        "Price": 1024,
+        "Quantity": 1,
+        "checked":false,
+        "Image": "image/goods-001.jpg"
+      },
+      {
+        "Id": "56957906642",
+        "Name": "小米（MI）小米手环2",
+        "Price": 160,
+        "Quantity": 2,
+        "checked":false,
+        "Image": "image/goods-002.jpg"
+      },
+      {
+        "Id": "56957906649",
+        "Name": "华为 P9 全网通 4GB+64GB版 琥珀金 ",
+        "Price": 3388,
+        "Quantity": 1,
+        "checked":false,
+        "Image": "image/goods-003.jpg"
+      }
+    ]
+  }
+}
