@@ -2,61 +2,21 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
-  <title>响应式网站</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-  <link rel="stylesheet" href="css/reset.css">
-  <link rel="stylesheet" href="css/demo.css">
-  <link rel="stylesheet" href="css/demo-responsive.css">
+  <title></title>
+  <style>
+    html,body{padding: 0;margin: 0;}
+    .top-line{height: 3px;background-color: #060106;margin: 0;}
+    h3{text-align: center;color: #060106;font-family: "微软雅黑"}
+    .demo-list{font: 24px/40px "微软雅黑";padding-left: 30px;}
+    a{color:#333;text-decoration:none;font: 16px/24px "微软雅黑"}
+  </style>
 </head>
 <body>
-<div id="demo">
-  <!--导航-->
-  <nav id="responsive">
-    <div class="nav-logo">
-      <a href="javascript:">
-        <h1 v-text="ENGtitle"></h1>
-        <h3 v-text="state"></h3>
-        <p v-text="CHNtitle"></p>
-      </a>
-    </div>
-    <ul class="nav-menu-list">
-      <li v-for="menu in menuList"><a href="javascript:">{{menu.name}}</a></li>
-    </ul>
-    <div class="nav-hello-logo">
-      <img :src="navLeftLogo">
-    </div>
-    <p class="break-line"></p>
-  </nav>
-  <!--中间内容，图片展示-->
-  <section>
-    <p><a href="javascript:"v-text="imgName1"></a></p>
-    <ul class="img-list">
-      <li v-for="bzzcnImg in bzzcn" :class="bzzcnImg.id"><img :src="bzzcnImg.url" :alt="bzzcnImg.discription"></li>
-    </ul>
-    <p><a href="javascript:"v-text="imgName2"></a></p>
-    <ul class="img-list">
-      <li v-for="sassImg in sass" :class="sassImg.id"><img :src="sassImg.url" :alt="sassImg.discription"></li>
-    </ul>
-    <p class="break-line"></p>
-  </section>
-  <!--尾部内容-->
-  <footer>
-    <div>
-      <p>{{aboutInfo}}</p>
-      <ul class="about-us">
-        <li v-for="item in aboutUs"><a href="javascript:">{{item.item}}</a></li>
-      </ul>
-    </div>
-    <div>
-      <p>{{linkInfo}}</p>
-      <ul class="friend-link">
-        <li v-for="item in friendLink"><a href="javascript:">{{item.item}}</a></li>
-      </ul>
-    </div>
-  </footer>
-</div>
+<p class="top-line"></p>
+<h3>YangJiaxi的demo集</h3>
+<p class="demo-list">demo列表：</p>
+<ul>
+  <li><a href="./demos/responsiveWebDemo.html">响应式网站demo</a></li>
+</ul>
 </body>
-<script src="js/vue.js"></script>
-<script src="js/vue-resource.js"></script>
-<script src="js/demo.js"></script>
-</html>
+</html>  

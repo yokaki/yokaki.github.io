@@ -20,7 +20,7 @@ new Vue({
   },
   methods: {
     getTitleInfomation: function () {
-      this.$http.get('./data/information.json').then(res => {
+      this.$http.get('../data/information.json').then(res => {
         this.menuList = res.body.result.menuList;
         this.navLeftLogo = res.body.result.navLeftLogo;
         this.bzzcn = res.body.result.imgList.bzzcn;

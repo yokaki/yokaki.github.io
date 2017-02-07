@@ -18,42 +18,42 @@
         "name": "参考"
       }
     ],
-    "navLeftLogo":"img/ninghao_ad.png",
+    "navLeftLogo":"../img/ninghao_ad.png",
     "imgList":{
       "bzzcn":[
         {
-          "url":"img/bzzcn4.png",
+          "url":"../img/bzzcn4.png",
           "id":"bzzcn4",
           "discription":"缩略图"
         }, {
-          "url":"img/bzzcn3.png",
+          "url":"../img/bzzcn3.png",
           "id":"bzzcn3",
           "discription":"小图"
         }, {
-          "url":"img/bzzcn2.png",
+          "url":"../img/bzzcn2.png",
           "id":"bzzcn2",
           "discription":"大图"
         }, {
-          "url":"img/bzzcn1.png",
+          "url":"../img/bzzcn1.png",
           "id":"bzzcn1",
           "discription":"超大图"
         }
       ],
       "sass":[
         {
-          "url":"img/sass4.png",
+          "url":"../img/sass4.png",
           "id":"bzzcn4",
           "discription":"缩略图"
         }, {
-          "url":"img/sass3.png",
+          "url":"../img/sass3.png",
           "id":"bzzcn3",
           "discription":"小图"
         }, {
-          "url":"img/sass2.png",
+          "url":"../img/sass2.png",
           "id":"bzzcn2",
           "discription":"大图"
         }, {
-          "url":"img/sass1.png",
+          "url":"../img/sass1.png",
           "id":"bzzcn1",
           "discription":"超大图"
         }
