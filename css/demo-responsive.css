@@ -1,0 +1,47 @@
+@media screen and (max-width: 1000px) {
+  .bzzcn4 {
+    display: none
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .nav-hello-logo, .bzzcn3 {
+    display: none;
+  }
+  .nav-logo{height: 70px;width:140px;padding-top: 0;}
+  .nav-logo p{display: none}
+  section>p{font:bold 16px/32px '微软雅黑';text-indent: 28px;margin-bottom: 30px;}
+  footer p{font: bold 16px/32px '微软雅黑';}
+
+  .img-list img{width: 95%}
+}
+
+@media screen and (max-width: 600px) {
+  #responsive {
+    display: block;
+  }
+
+  .bzzcn2 {
+    display: none;
+  }
+
+  .nav-logo {
+    margin-bottom: 20px;
+    background-color: #10bbcc;
+  }
+
+  .nav-logo a {
+    color: #f8f8f8;
+  }
+
+  .nav-menu-list li {
+    background-color: #ccc;
+  }
+
+  .nav-menu-list a {
+    color: #f8f8f8;
+  }  .nav-menu-list>li{height: 20px;width: 40px;font: 12px/20px '微软雅黑';text-align: center;background-color: #10bbcc;border-radius: 5px;}
+  .img-list img{width: 100%}
+
+
+}

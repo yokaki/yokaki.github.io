@@ -1,0 +1,88 @@
+{
+  "status": 1,
+  "result": {
+    "menuList": [
+      {
+        "name": "首页"
+      },
+      {
+        "name": "国内"
+      },
+      {
+        "name": "国外"
+      },
+      {
+        "name": "分享"
+      },
+      {
+        "name": "参考"
+      }
+    ],
+    "navLeftLogo":"img/ninghao_ad.png",
+    "imgList":{
+      "bzzcn":[
+        {
+          "url":"img/bzzcn4.png",
+          "id":"bzzcn4",
+          "discription":"缩略图"
+        }, {
+          "url":"img/bzzcn3.png",
+          "id":"bzzcn3",
+          "discription":"小图"
+        }, {
+          "url":"img/bzzcn2.png",
+          "id":"bzzcn2",
+          "discription":"大图"
+        }, {
+          "url":"img/bzzcn1.png",
+          "id":"bzzcn1",
+          "discription":"超大图"
+        }
+      ],
+      "sass":[
+        {
+          "url":"img/sass4.png",
+          "id":"bzzcn4",
+          "discription":"缩略图"
+        }, {
+          "url":"img/sass3.png",
+          "id":"bzzcn3",
+          "discription":"小图"
+        }, {
+          "url":"img/sass2.png",
+          "id":"bzzcn2",
+          "discription":"大图"
+        }, {
+          "url":"img/sass1.png",
+          "id":"bzzcn1",
+          "discription":"超大图"
+        }
+      ]
+
+    },
+    "footerInformation":{
+      "aboutInfo":"About Us",
+      "linkInfo":"Links",
+      "aboutUs":[
+        {
+          "item":"关于我们"
+        },
+        {
+          "item":"联系我们"
+        }, {
+          "item":"建议"
+        }
+      ],
+      "friendLink":[
+        {
+          "item":"友情链接"
+        },
+        {
+          "item":"招贤纳士"
+        }, {
+          "item":"商业合作"
+        }
+      ]
+    }
+  }
+}
