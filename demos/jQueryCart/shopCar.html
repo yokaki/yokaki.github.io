@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <link rel="stylesheet" href="css/reset.css">
+  <style>
+    .shopCar > p {
+      height: 60px;
+      width: 100%;
+      background-color: #ff3333;
+      color: #fff;
+      font-size: 40px;
+      line-height: 60px;
+      border-bottom: 4px solid #20896f;
+    }
+
+    .shopCar > ul {
+      height: 40px;
+      width: 100%;
+      background-color: #00AA88;
+      color: #fff;
+      font-size: 24px;
+      border-bottom: 4px solid #0b2c89;
+    }
+
+    .shopCar > ul li {
+      padding-right: 200px;
+    }
+
+    .proList span {
+      padding: 0 10px;
+      cursor: pointer;
+    }
+
+    .colorF60 {
+      color: #f60;
+    }
+    .proNum{
+      border: 0;
+      width: 20px;
+      font-size: 16px;
+    }
+  </style>
+  <script src="javascript/jQuery.js"></script>
+  <script src="javascript/shopCar.js"></script>
+</head>
+<body>
+<div class="shopCar">
+  <p>购物车</p>
+  <ul class="children_left_float">
+    <li><input type="checkbox" name="selectAll" class="selectAll" checked>全选</li>
+    <li>商品</li>
+    <li>单价</li>
+    <li>数量</li>
+    <li>小计</li>
+  </ul>
+  <ul class="children_left_float proList">
+    <li><input type="checkbox" name="selectAll" class="selectMe" checked>书名</li>
+    <li>商品</li>
+    <li class="proPrice">41.00</li>
+    <li><span class="addOne">+</span><input type="text" class="proNum" value="1"><span class="cutOne">-</span></li>
+    <li class="rowPrice">41.00</li>
+  </ul>
+  <ul class="children_left_float proList">
+    <li><input type="checkbox" name="selectAll" class="selectMe" checked>书名</li>
+    <li>商品</li>
+    <li class="proPrice">41.00</li>
+    <li><span class="addOne">+</span><input type="text" class="proNum" value="1"><span  class="cutOne">-</span></li>
+    <li class="rowPrice">41.00</li>
+  </ul>
+  <ul class="children_left_float">
+    <li><input type="checkbox" name="selectAll" class="selectAll" checked>全选</li>
+    <li>已经选择 <span class="colorF60 totleNum">2</span>件商品</li>
+    <li>总价 <span class="colorF60 totlePrice">82.00</span></li>
+  </ul>
+</div>
+</body>
+</html>  
