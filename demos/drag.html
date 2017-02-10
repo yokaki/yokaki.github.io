@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <style>
+    .letsGo {
+      height: 100px;
+      width: 100px;
+      background-color: #00AA88;
+      position: absolute;
+      cursor: move;
+    }
+  </style>
+</head>
+<body>
+<div class="letsGo"></div>
+<script src="jQueryCart/javascript/jQuery.js"></script>
+
+<script>
+  $(function () {
+    let flag = false;
+    $('.letsGo').mousedown(function () {
+      flag = true;
+    });
+    $('.letsGo').mouseup(function () {
+      flag = false;
+    });
+    $(document).mousemove(function (e) {
+      if (flag) {
+        let x = e.pageX,
+            y = e.pageY;
+        $('.letsGo').css({left: x - 50, top: y - 50});
+      }
+    });
+  });
+</script>
+</body>
+</html>  

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <style>
+    p {
+      text-align: center;
+      height: 40px;
+      line-height: 40px;
+      font-size: 32px;
+      color: #c0c0c0;
+      background-color: #00AA88;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+<p class="showTime"></p>
+<script src="jQueryCart/javascript/jQuery.js"></script>
+<script>
+  $(function () {
+    showTime();
+    setInterval(function () {
+      showTime();
+    }, 1000);
+    function showTime() {
+      let now = new Date(),//获取实时时间
+          nowYear = now.getFullYear(),
+          nowMonth = now.getMonth() + 1,
+          nowDate = now.getDate(),
+          nowHour = now.getHours(),
+          nowMinutes = now.getMinutes(),
+          nowSeconds = now.getSeconds(),
+          nowDay = now.getDay();
+      switch (nowDay) {
+        case 0:nowDay = '星期日';break;
+        case 1:nowDay = '星期一';break;
+        case 2:nowDay = '星期二';break;
+        case 3:nowDay = '星期三';break;
+        case 4:nowDay = '星期四';break;
+        case 5:nowDay = '星期五';break;
+        case 6:nowDay = '星期六';break;
+      }//如果数字小于10，数字前面加0
+      if (nowMonth < 10) {nowMonth = '0' + nowMonth;}
+      if (nowDate < 10) {nowDate = '0' + nowDate;}
+      if (nowHour < 10) {nowHour = '0' + nowHour;}
+      if (nowMinutes < 10) {nowMinutes = '0' + nowMinutes;}
+      if (nowSeconds < 10) {nowSeconds = '0' + nowSeconds;}
+      let timeStr = '北京时间：' + nowYear + '年'  + nowMonth + '月'  + nowDate + '日'  + nowHour + '时' + nowMinutes + '分'  + nowSeconds + '秒' + nowDay;
+      $('.showTime').text(timeStr).show();
+    }
+  });
+</script>
+</body>
+</html>  

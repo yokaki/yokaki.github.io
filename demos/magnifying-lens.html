@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <link rel="stylesheet" href="../css/magnifying-lens.css">
+
+</head>
+<body>
+<div class="magnifying-lens">
+  <div class="normal-img">
+    <img src="../img/demo_small.jpg">
+    <div class="move"></div>
+  </div>
+  <div class="bigger-img">
+    <img src="../img/demo.jpg">
+  </div>
+</div>
+<!--
+1.设置两个同样大小的盒子。
+  左边盒子装正常的图片，图片和盒子同样大小。
+  右边盒子装放大后的图片，图片的中心点和盒子的中心点重合。设置visibility: hidden;
+2.给左边盒子设置鼠标移入事件：
+  获取鼠标相对于文档的坐标a。
+  获取左边盒子相对于文档的坐标b。
+  a-b得到鼠标相对于盒子的坐标c。
+  设置小方块的坐标d：
+    d=c-d高宽的一半
+  设置小方块的移动范围。
+  右边盒子设置visibility: visible;
+  图片随着鼠标的移动而移动
+3.左边盒子设置鼠标离开事件：
+  右边盒子visibility: hidden;
+  小方块隐藏。
+-->
+<script src="jQueryCart/javascript/jQuery.js"></script>
+
+<script>
+  $(function () {
+    $('.normal-img').mousemove(function (e) {
+      let mouseX = e.pageX,//鼠标相当于文档的坐标
+          mouseY = e.pageY,
+          smallX = $(this).offset().left,//左盒子相对于文档的坐标
+          smallY = $(this).offset().top,
+          mouseInSmallX = mouseX - smallX,//鼠标在左盒子的坐标
+          mouseInSmallY = mouseY - smallY,
+          moveX=mouseInSmallX-($('.move').width()/2),//move的坐标
+          moveY=mouseInSmallY-($('.move').height()/2);
+      if(moveX<10){moveX=0;}
+      if(moveX>250){moveX=260;}
+      if(moveY<10){moveY=0;}
+      if(moveY>170){moveY=180;}
+      $('.move').show().css({left:moveX,top:moveY});
+      $('.bigger-img').css({visibility:'visible'}).find('img').css({left:-mouseInSmallX*1.3,top:-mouseInSmallY});
+    });
+    $('.normal-img').mouseleave(function () {
+      $('.move').hide();
+      $('.bigger-img').css({visibility:'hidden'});
+    });
+  });
+</script>
+</body>
+</html>  

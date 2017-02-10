@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <!--<link rel="stylesheet" href="../css/reset.css">-->
+  <style>
+    a {
+      text-decoration: none;
+      color: #666;
+    }
+
+    .nwesList li {
+      padding: 10px 0;
+    }
+
+    #newTitle {
+      position: absolute;
+      height: 200px;
+      width: 300px;
+      color: #1671cc;
+      background-color: #fff;
+      display: none;
+      border: 1px #1671cc solid;
+      text-indent: 20px;
+    }
+  </style>
+
+</head>
+<body>
+<div>
+  <p>新闻列表，鼠标悬停查看新闻详情</p>
+  <ul class="nwesList">
+    <li><a href="#" data-content="炉石传说好玩">炉石传说好玩</a></li>
+    <li><a href="#" data-content="暴雪爸爸给力 ">暴雪爸爸给力</a></li>
+    <li><a href="#" data-content="今天成都又是雾霾天">今天成都又是雾霾天</a></li>
+  </ul>
+</div>
+<div id="newTitle"></div>
+<script src="jQueryCart/javascript/jQuery.js"></script>
+
+<script>
+  $(function () {
+    let content;
+    $('.nwesList a').hover(function (e) {
+      content = $(this).attr('data-content');
+      let x = e.pageX + 10,
+          y = e.pageY + 10;
+      $('#newTitle').text(content).css({left: x, top: y}).stop(true, true).fadeIn();
+    }, function () {
+      $('#newTitle').stop(true, true).fadeOut();
+    });
+    $('.nwesList a').mousemove(function (e) {
+      let x = e.pageX + 10,
+          y = e.pageY + 10;
+      $('#newTitle').css({left: x, top: y});
+    });
+  });
+</script>
+</body>
+</html>  

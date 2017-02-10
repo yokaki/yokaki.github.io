@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TODO List</title>
+  <link rel="stylesheet" href="css/todoList.css">
+</head>
+<body>
+<div id="app">
+  <h1>My ToDo List</h1>
+  <input v-model="newTodo" @keyup.enter="addTodo">
+  <ul>
+    <li v-for="(todo,index) in todoList">
+      <span>{{todo.text}}<span class="theTime">{{theTime}}</span></span>
+      <a href="javascript:" @click="removeTodo(index)">Delete</a>
+    </li>
+  </ul>
+</div>
+<script src="../../js/vue.js"></script>
+<script>
+  new Vue({
+    el: "#app",
+    data: {
+      newTodo: "",
+      todoList: [],
+      theTime: new Date().toDateString()
+    },
+    methods: {
+      addTodo: function () {
+        let text = this.newTodo.trim();
+        if (text) {
+          this.todoList.push({text: text});
+          this.newTodo = "";
+        }
+      },
+      removeTodo: function (index) {
+        console.log(index);
+        this.todoList.splice(index, 1);//splice() 方法可删除从index 处开始的零个或多个元素
+      }
+    }
+  });
+
+</script>
+</body>
+</html>
