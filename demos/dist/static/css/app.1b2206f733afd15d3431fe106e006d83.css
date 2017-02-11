@@ -1,0 +1,17 @@
+
+#app {
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /*text-align: center;*/
+  color: #2c3e50;
+  margin-top: 60px;
+}
+
+.hello {display: -ms-flexbox;display: flex;-ms-flex-direction: column;flex-direction: column; -ms-flex-pack: center; justify-content: center; -ms-flex-align: center; align-items: center;
+}
+
+.test p{color: #00f
+}
+
+/*# sourceMappingURL=app.1b2206f733afd15d3431fe106e006d83.css.map*/
