@@ -1,0 +1,30 @@
+
+#app {
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /*text-align: center;*/
+  color: #2c3e50;
+  margin-top: 60px;
+}
+
+.hello {display: -ms-flexbox;display: flex;-ms-flex-direction: column;flex-direction: column; -ms-flex-pack: center; justify-content: center; -ms-flex-align: center; align-items: center;
+}
+
+.test{display: -ms-flexbox;display: flex;-ms-flex-direction: column;flex-direction: column;-ms-flex-align: center;align-items: center;
+}
+.test p{color: #00f
+}
+
+img {width: 50px;height: 50px;
+}
+@keyframes myanimation {
+from {
+}
+to { transform: translateY(-5px);
+}
+}
+img:hover {animation: .4s linear myanimation;animation-fill-mode: forwards;
+}
+
+/*# sourceMappingURL=app.10e9a7bc6adcf285927fdb0a544bb63f.css.map*/
