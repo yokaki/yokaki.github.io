@@ -1,0 +1,41 @@
+
+#app {
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /*text-align: center;*/
+  color: #2c3e50;
+  margin-top: 60px;
+}
+
+.hello{width: 90%;margin: 0 auto;
+}
+h3{text-align: center;
+}
+
+.movie {display: -ms-flexbox;display: flex;-ms-flex-direction: column;flex-direction: column;
+}
+.in-theaters{font: 24px/32px "\5FAE\8F6F\96C5\9ED1";padding-left: 20px;
+}
+.movie-item{display: -ms-flexbox;display: flex;-ms-flex-pack: justify;justify-content: space-between;padding: 10px 20px;font: 16px/24px "\5FAE\8F6F\96C5\9ED1";
+}
+
+.logo-container{display: -ms-flexbox;display: flex;-ms-flex-pack:center;justify-content:center;padding: 10px 0 ;
+}
+.logo-img {
+  width: 50px;
+  height: 50px;
+}
+@keyframes myanimation {
+from {
+}
+to {
+    transform: translateY(-5px);
+}
+}
+img:hover {
+  animation: .4s linear myanimation;
+  animation-fill-mode: forwards;
+}
+
+/*# sourceMappingURL=app.bed955651c202d773af62941a84285c7.css.map*/
