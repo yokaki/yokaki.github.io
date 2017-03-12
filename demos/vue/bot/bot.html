@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>My Bot</title>
+  <script src="vue.js"></script>
+  <script src="vue-resource.js"></script>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+<div id="app">
+  <ul class="talk-list">
+    <li v-for="item in talkList" class="talk-item" :class="item.klass">
+      {{item.who}}：{{item.text}}
+    <span v-if="item.url" class="item-url">:<a :href="item.url" class="url" target="_blank">  点这里查看信息哦~</a></span>
+    </li>
+  </ul>
+  <input type="text" v-model="myTalk" class="talk-input" @keyup.enter="submit">
+</div>
+<script>
+  new Vue({
+    el: '#app',
+    data: {
+      myTalk: '',
+      talkList: []
+    },
+    methods: {
+      submit(){
+        let talkContent = this.myTalk;
+        this.talkList.push({text: talkContent, who: '我', klass: 'me'});
+        this.myTalk = '';
+        let options = {
+          "key": "9ad73b0cbfeb4cb29103bacaa268a3ce",
+          "info": talkContent
+        };
+        this.$http.get('http://www.tuling123.com/openapi/api?key=' + options.key + '&info=' + options.info+'&userid=1234').then(res => {
+          console.log(res.body)
+          let obj = JSON.parse(res.body);
+          this.talkList.push({text: obj.text, url: obj.url ? obj.url : '', who: '加州', klass: 'bot'});
+        })
+      }
+    }
+  });
+</script>
+</body>
+</html>  
